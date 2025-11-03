@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 6</title>
+</head>
+<body>
+    <p id="respuesta"></p>
+    <script>
+        let num_terminos = parseInt(prompt("Introduce el número de terminos que usted desea para la sucesión de Fibonacci: "));
+        function fibonacci(terminos) {
+            let lista_fibonacci = [];
+            for (i = 0; i < terminos; i++){
+                if (i === 0) {
+                    lista_fibonacci.push(0);
+                } else if (i === 1) {
+                    lista_fibonacci.push(1);
+                } else {
+                    let termino = lista_fibonacci[i-1] + lista_fibonacci[i-2];
+                    lista_fibonacci.push(termino)
+                }
+            };
+            cadena_fibonacci = "";
+            for (let k = 0; k < lista_fibonacci.length; k++) {
+                cadena_fibonacci += (lista_fibonacci[k] + ", ");
+            };
+            return cadena_fibonacci
+        };
+        document.getElementById("respuesta").innerHTML = "Los primeros " + num_terminos + " de la secuencia Fibonacci son: " + fibonacci(num_terminos);
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5</title>
+</head>
+<body>
+    <p id="respuesta"></p>
+    <script>
+        let numero1 = parseInt(prompt("Introduce un número: "));
+        let numero2 = parseInt(prompt("Introduce otro numero: "));
+        let lista_primos = [];
+        for (let i = numero1; i <= numero2; i++) {
+            if (i > 1) {
+                let lista_divisores = [];
+                for (let j = 2; j < i; j++) {
+                    if (i % j === 0) {
+                        lista_divisores.push(j);
+                    };
+                };
+                if (lista_divisores.length === 0) {
+                    lista_primos.push(i)
+                };
+            };
+        };
+        cadena_primos = "";
+        for (let k = 0; k < lista_primos.length; k++) {
+            cadena_primos += (lista_primos[k] + ", ");
+        };
+        document.getElementById("respuesta").innerHTML = "Los numeros primos entre " + numero1 + " y " + numero2 + " son: " + cadena_primos
+    </script>
+</body>
+</html>

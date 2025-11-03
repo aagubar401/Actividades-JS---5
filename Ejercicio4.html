@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4</title>
+</head>
+<body>
+    <p id="respuesta"></p>
+    <script>
+        let precio = parseFloat(prompt("Introduce el precio del producto: "));
+        let descuento = parseFloat(prompt("Introduce el porcentaje a descontar: "));
+        function aplicar_descuento(precio, descuento) {
+            let precio_final = precio - (precio * (descuento / 100));
+            let precio_final_redondeado =  precio_final.toFixed(2);
+            return precio_final_redondeado
+        }
+        document.getElementById("respuesta").innerHTML = "El precio final del producto despues de aplicar un descuento del " + descuento + "% es: " + aplicar_descuento(precio, descuento)
+    </script>
+</body>
+</html>

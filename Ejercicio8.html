@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 8</title>
+</head>
+<body>
+    <p id="respuesta"></p>
+    <script>
+        function factorial(num) {
+            let result = 1;
+            if (num == 0 || num == 1) {
+                return result;
+            } else {
+                for (i = 1; i <= num; i++) {
+                    result = result * i;
+                };
+                return result;
+            };
+        };
+        numero = parseInt(prompt("Ingrese un número entero no negativo: "));
+        if (numero < 0) {
+            document.getElementById("respuesta").innerHTML = "El número introducido NO ES POSITIVO";
+        } else {
+            let factorial_num = factorial(numero);
+            document.getElementById("respuesta").innerHTML = "El factorial de " + numero + " es: " + factorial_num;
+        };
+    </script>
+</body>
+</html>

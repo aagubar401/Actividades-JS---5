@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 7</title>
+</head>
+<body>
+    <p id="respuesta"></p>
+    <script>
+        let conversion = parseInt(prompt("¿Qué tipo de conversión deseas realizar? (1 para Celsius a Fahrenheit, 2 para Fahrenheit a Celsius): "));
+        function celsius_to_fahrenheit(celsius) {
+            let fahrenheit = (celsius * 9/5) + 32;
+            return fahrenheit;
+        };
+        function fahrenheit_to_celsius(fahrenheit) {
+            let celsius = (fahrenheit - 32) * 5/9;
+            return celsius;
+        };
+        if (conversion != 1 && conversion != 2) {
+            document.getElementById("respuesta").innerHTML = "Opcion invalida";
+        } else if (conversion == 1) {
+            let celsius = parseFloat(prompt("Introduce la temperatura en Celsius: "));
+            let fahrenheit = celsius_to_fahrenheit(celsius);
+            document.getElementById("respuesta").innerHTML = celsius + " grados Celsius equivalen a " + fahrenheit + " grados Fahrenheit"
+        } else {
+            let fahrenheit = parseFloat(prompt("Introduce la temperatura en Fahrenheit: "));
+            let celsius = fahrenheit_to_celsius(fahrenheit);
+            document.getElementById("respuesta").innerHTML = fahrenheit + " grados Fahrenheit equivalen a " + celsius + " grados Celsius"
+        }
+    </script>
+</body>
+</html>

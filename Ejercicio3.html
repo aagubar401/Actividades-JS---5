@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3</title>
+</head>
+<body>
+    <p id="respuesta"></p>
+    <script>
+        let peso = parseFloat(prompt("Introduce tu peso en kilogramos: "));
+        let altura = parseFloat(prompt("Introduce tu altura en metros: "));
+        let imc = peso / (altura * altura);
+        let rango;
+        if (imc < 18.5) {
+            rango = "Bajo peso";
+        } else if (imc >= 18.5 && imc < 25) {
+            rango = "Peso normal";
+        } else if (imc >= 25 && imc < 30) {
+            rango = "Sobrepeso";
+        } else {
+            rango = "Obesidad"
+        };
+        document.getElementById("respuesta").innerHTML = "IMC: " + imc + ", Clasificación: " + rango
+    </script>
+</body>
+</html>
