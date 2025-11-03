@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+</head>
+<body>
+    <p id="respuesta"></p>
+    <script>
+        let alojamoento = parseFloat(prompt("Introduce los costes de alojamiento: "));
+        let alimentacion = parseFloat(prompt("Introduce los costes de alimentacion: "));
+        let entretenimiento = parseFloat(prompt("Introduce los costes de entretenimiento: "));
+        let coste_total = alojamoento + alimentacion + entretenimiento;
+        document.getElementById("respuesta").innerHTML = "El coste total del viaje es de: " + coste_total + "€";
+    </script>
+</body>
+</html>
